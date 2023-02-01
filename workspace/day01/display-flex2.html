@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+    <style>
+        div{
+            border: 1px solid black;
+        }
+
+        div.container{
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        div.wrap{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        div.wrap div{
+            width: 20%;
+        }
+
+        #container, div.wrap{
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrap">
+            <div>1열</div>
+            <div>2열</div>
+            <div>3열</div>
+            <div>4열</div>
+        </div>
+        <div class="wrap">
+            <div>1열</div>
+            <div>2열</div>
+            <div>3열</div>
+            <div>4열</div>
+        </div>
+        <div class="wrap">
+            <div>1열</div>
+            <div>2열</div>
+            <div>3열</div>
+            <div>4열</div>
+        </div>
+    </div>
+</body>
+
+</html>

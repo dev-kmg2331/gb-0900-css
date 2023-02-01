@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바깥 여백</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+        #div1 {
+            /* margin: 30px 30px 30px 30px; */
+            margin: 30px;
+            border: 1px solid black;
+        }
+
+        #div2 {
+            /* 위의 요소의 바깥 여백과 겹친다면 + 되지 않는다(상, 하). */
+            margin: 60px 0 30px 0;
+            border: 1px solid red;
+        }
+
+        #div3 {
+            margin: 20px 0 30px 0;
+            border: 1px solid blue;
+        }
+
+        #div4 {
+            margin: 30px 0 30px 0;
+            border: 1px dashed green;
+        }
+
+        #div5 {
+            margin: 0 30px 50px;
+            border: 1px dotted purple;
+        }
+
+        #div6 {
+            display: inline-block;
+            margin: 10px 50px 10px;
+            border: 1px dashed palevioletred;
+        }
+
+        #div7 {
+            display: inline-block;
+            margin: 10px 50px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="div1">
+            안녕하세요 DIV1입니다.
+        </div>
+        <div id="div2">
+            안녕하세요 DIV2입니다.
+        </div>
+        <div id="div3">
+            안녕하세요 DIV3입니다.
+        </div>
+        <div id="div4">
+            안녕하세요 DIV4입니다.
+        </div>
+        <div id="div5">
+            안녕하세요 DIV5입니다.
+        </div>
+        <div id="div6">
+            안녕하세요 DIV6입니다.
+        </div>
+        <div id="div7">
+            안녕하세요 DIV7입니다.
+        </div>
+    </div>
+</body>
+
+</html>

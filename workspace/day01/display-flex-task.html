@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display-flex 실습</title>
+    <style>
+        div.container1 {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        div.container1 div {
+            width: 20%;
+            float: left;
+            margin-left: 5px;
+        }
+
+        .container1 div:nth-child(1){
+            margin-left: 0;
+        }
+
+        div.container1 div img{
+            width: 100%;
+        }
+
+        div.container2 {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            width: 900px;
+        }
+
+        div.container2 div {
+            width: 20%;
+        }
+
+        div.container2 div img{
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container2">
+        <div><img src="display_flex_img/img1.jpg" alt=""></div>
+        <div><img src="display_flex_img/img2.jpg" alt=""></div>
+        <div><img src="display_flex_img/img3.jpg" alt=""></div>
+    </div>
+    <div class="container1">
+        <div><img src="display_flex_img/img1.jpg" alt=""></div>
+        <div><img src="display_flex_img/img2.jpg" alt=""></div>
+        <div><img src="display_flex_img/img3.jpg" alt=""></div>
+    </div>
+</body>
+
+</html>
