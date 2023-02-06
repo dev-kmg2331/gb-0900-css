@@ -3,7 +3,7 @@ body {
     font-size: 15px;
     line-height: 1;
     letter-spacing: -.4px;
-}   
+}
 
 h1,
 p,
@@ -45,7 +45,9 @@ div.sns {
 }
 
 div.sns div:nth-child(1) {
-    font-size: 12px;
+    font-size: 10px;
+    font-family: OhouseSans;
+    font-weight: 200;
     text-align: center;
     margin: 15px 0;
     color: #757575;
@@ -82,7 +84,7 @@ div.email div {
     display: flex;
 }
 
-div.email p{
+div.email p {
     margin-bottom: 12px;
     font-size: 16px;
     line-height: 20px;
@@ -124,7 +126,7 @@ div.email p{
 
 #email-first input::placeholder {
     opacity: 0.5;
-    font-family: Noto Sans CJK KR;
+    font-family: OhouseSans;
     font-weight: 400;
 }
 
@@ -139,6 +141,7 @@ div.email p{
     border: 1px solid #dbdbdb;
     background-color: #fff;
     color: #424242;
+    appearance: none;
     -webkit-appearance: none;
 }
 
@@ -208,7 +211,7 @@ input.inputs {
 
 input.inputs::placeholder {
     opacity: 0.5;
-    font-family: Noto Sans CJK KR;
+    font-family: OhouseSans;
     font-size: 14px;
     font-weight: 500;
 }
@@ -301,14 +304,14 @@ div.main form button#join-btn {
     color: #fff;
 }
 
-p.login{
+p.login {
     color: #424242;
     font-size: 15px;
     text-align: center;
     margin-top: 30px;
 }
 
-p.login a{
+p.login a {
     text-decoration: underline;
     font-weight: bold;
     display: inline-block;
