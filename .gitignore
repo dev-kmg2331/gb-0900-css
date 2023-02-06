@@ -10,9 +10,6 @@
 # link
 *.lnk
 
-# resource
-**/resource
-
 # vscode gitignore 추가할 내용
 
 .vscode/*
