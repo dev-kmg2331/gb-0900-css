@@ -8,38 +8,79 @@ let imgArr = new Array(
 );
 
 let banner = $('div.banner');
+let arrowLeft = $('.menu-list-left');
+let arrowRight = $('.menu-list-right');
 let imgsCount = imgArr.length;
 let imgsIndex = 0;
+let intevalTime = 2000;
+let arrows = $('li.arrow');
 
 function loadImgs() {
     let htmlLine;
 
     for (let i = 0; i < imgsCount; i++) {
-        htmlLine = "<div><img src =" + imgArr[i] + ">" + "</div>";
+        htmlLine = `<div><img src=${imgArr[i]}></div>`;
         banner.append(htmlLine);
     }
 
     banner.prepend(htmlLine);
-    htmlLine = "<div><img src =" + imgArr[0] + ">" + "</div>"
+    htmlLine = `<div><img src=${imgArr[0]}></div>`
     banner.append(htmlLine)
 }
 
 banner.css('width', 100 * (imgsCount + 2) + "vw");
-// banner.css('transform', 'translate(-' + (100 * ++imgsIndex) + 'vw)');
+banner.css('transform', 'translate(-' + (100 * ++imgsIndex) + 'vw)');
 
 loadImgs();
 
-setInterval(autoSlide, 2000);
+let interval = setInterval(autoSlide, intevalTime);
+
+console.log(arrows);
+
+arrows.each((index, arrow) => {
+    // jquery 객체로 변환해주어야함
+    slideBtn($(arrow));
+});
 
 function autoSlide() {
     banner.css('transition', 'transform 0.5s');
     imgsIndex++;
-    if (imgsIndex == imgsCount + 2) {
-        imgsIndex = 1;
-        banner.css('transition', 'transform 0s');
+    if (imgsIndex == imgsCount + 1) {
+        console.log(imgsIndex);
+
+        console.log('7번째')
         banner.css('transform', 'translate(-' + (100 * imgsIndex) + 'vw)');
-    } else {
-        banner.css('transform', 'translate(-' + (100 * imgsIndex) + 'vw)');
-        console.log(imgsIndex)
+
+        setTimeout(() => {
+            imgsIndex = 1;
+            banner.css('transition', 'transform 0s');
+            banner.css('transform', 'translate(-' + (100 * imgsIndex) + 'vw)');
+        }, 500);
+
+        return;
     }
+
+    banner.css('transform', 'translate(-' + (100 * imgsIndex) + 'vw)');
 }
+
+function slideBtn(arrow) {
+    console.log(arrow);
+    arrow.on('click',
+        () => {
+            clearInterval(interval);
+
+            var direction = arrow.attr('class') == 'menu-list-left arrow' ?
+                '+' : '-';
+
+            console.log(arrow.attr('class'));
+            console.log(direction);
+
+            console.log(banner);
+
+            // banner.css('transition', 'transform 0.5s');
+            banner.css('transform', `translste(${direction}` + `${100 * imgsIndex + 1}vw`);
+            console.log(`translste(${direction}` + `${100 * imgsIndex}vw)`);
+        }
+    );
+}
+
