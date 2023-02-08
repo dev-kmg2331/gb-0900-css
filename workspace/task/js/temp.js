@@ -29,18 +29,10 @@ function loadImgs() {
 }
 
 banner.css('width', 100 * (imgsCount + 2) + "vw");
-banner.css('transform', 'translate(-' + (100 * ++imgsIndex) + 'vw)');
 
 loadImgs();
 
 let interval = setInterval(autoSlide, intevalTime);
-
-console.log(arrows);
-
-arrows.each((index, arrow) => {
-    // jquery 객체로 변환해주어야함
-    slideBtn($(arrow));
-});
 
 function autoSlide() {
     banner.css('transition', 'transform 0.5s');
@@ -63,24 +55,55 @@ function autoSlide() {
     banner.css('transform', 'translate(-' + (100 * imgsIndex) + 'vw)');
 }
 
-function slideBtn(arrow) {
-    console.log(arrow);
-    arrow.on('click',
-        () => {
-            clearInterval(interval);
+// console.log(arrows);
 
-            var direction = arrow.attr('class') == 'menu-list-left arrow' ?
-                '+' : '-';
+// arrows.each((index, item) => {
+//     let arrow = $(item);
 
-            console.log(arrow.attr('class'));
-            console.log(direction);
+//     arrow.on('click',
+//         () => {
+//             clearInterval(interval);
 
-            console.log(banner);
+//             var direction =
+//                 arrow.attr('class') == 'menu-list-left arrow' ? 100 : -100;
 
-            // banner.css('transition', 'transform 0.5s');
-            banner.css('transform', `translste(${direction}` + `${100 * imgsIndex + 1}vw`);
-            console.log(`translste(${direction}` + `${100 * imgsIndex}vw)`);
-        }
-    );
-}
+//             alert("클릭됨!");
+
+//             // console.log(arrow.attr('class'));
+//             // console.log(direction);
+//             // console.log(banner);
+
+//             // banner.css('transition', 'transform 0.5s');
+//             // banner.css('transform', `translste(${direction + (-100 * (imgsIndex))}vw`);
+//             // console.log(banner.css('transform'));
+//             // console.log(`translste(${direction + (-100 * (imgsIndex))}vw)`);
+//         }
+//     );
+// });
+
+// let test = $('.menu-list-left');
+// test.on('click', () => {
+//     $(banner).css('transform', `translste(${-100 + (-100 * (imgsIndex))}vw`);
+// }); 
+
+// function slideBtn(arrow) {
+//     console.log(arrow);
+//     arrow.on('click',
+//         () => {
+//             // clearInterval(interval);
+
+//             var direction =
+//                 arrow.attr('class') == 'menu-list-left arrow' ? 100 : -100;
+
+//             console.log(arrow.attr('class'));
+//             console.log(direction);
+//             console.log(banner);
+
+//             // banner.css('transition', 'transform 0.5s');
+//             banner.css('transform', `translste(${direction + (-100 * (imgsIndex))}vw`);
+//             console.log(banner.css('transform'));
+//             console.log(`translste(${direction + (-100 * (imgsIndex))}vw)`);
+//         }
+//     );
+// }
 
