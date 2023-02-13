@@ -1,10 +1,10 @@
 let imgArr = new Array(
-    "https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/167515622792642420.png?gif=1&w=2560&q=100",
-    "https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/167516015960824455.png?gif=1&w=2560&q=100",
-    "https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/167515652600435978.png?gif=1&w=2560&q=100",
-    "https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/167532742983221456.png?gif=1&w=2560&q=100",
-    "https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/167481133010267751.jpg?gif=1&w=2560&q=100",
-    "https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/167515685145470025.png?gif=1&w=2560&q=100"
+    'https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/167515622792642420.png?gif=1&w=2560&q=100',
+    'https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/167516015960824455.png?gif=1&w=2560&q=100',
+    'https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/167515652600435978.png?gif=1&w=2560&q=100',
+    'https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/167532742983221456.png?gif=1&w=2560&q=100',
+    'https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/167481133010267751.jpg?gif=1&w=2560&q=100',
+    'https://image.ohou.se/i/bucketplace-v2-development/uploads/store/banners/store_home_banners/167515685145470025.png?gif=1&w=2560&q=100'
 );
 
 let banner = $('div.banner');
@@ -24,11 +24,11 @@ function loadImgs() {
     }
 
     banner.prepend(htmlLine);
-    htmlLine = `<div><img src=${imgArr[0]}></div>`
-    banner.append(htmlLine)
+    htmlLine = `<div><img src=${imgArr[0]}></div>`;
+    banner.append(htmlLine);
 }
 
-banner.css('width', 100 * (imgsCount + 2) + "vw");
+banner.css('width', 100 * (imgsCount + 2) + 'vw');
 
 loadImgs();
 
@@ -40,19 +40,19 @@ function autoSlide() {
     if (imgsIndex == imgsCount + 1) {
         console.log(imgsIndex);
 
-        console.log('7번째')
-        banner.css('transform', 'translate(-' + (100 * imgsIndex) + 'vw)');
+        console.log('7번째');
+        banner.css('transform', 'translate(-' + 100 * imgsIndex + 'vw)');
 
         setTimeout(() => {
             imgsIndex = 1;
             banner.css('transition', 'transform 0s');
-            banner.css('transform', 'translate(-' + (100 * imgsIndex) + 'vw)');
+            banner.css('transform', 'translate(-' + 100 * imgsIndex + 'vw)');
         }, 500);
 
         return;
     }
 
-    banner.css('transform', 'translate(-' + (100 * imgsIndex) + 'vw)');
+    banner.css('transform', 'translate(-' + 100 * imgsIndex + 'vw)');
 }
 
 // console.log(arrows);
@@ -84,7 +84,7 @@ function autoSlide() {
 // let test = $('.menu-list-left');
 // test.on('click', () => {
 //     $(banner).css('transform', `translste(${-100 + (-100 * (imgsIndex))}vw`);
-// }); 
+// });
 
 // function slideBtn(arrow) {
 //     console.log(arrow);
@@ -106,4 +106,3 @@ function autoSlide() {
 //         }
 //     );
 // }
-
